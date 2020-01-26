@@ -660,4 +660,6 @@
     <!-- Enable Smart charging. -->
     <bool name="config_deviceSupportSmartCharging">true</bool>
 
+    <!-- Whether to use in-built Screen Record service -->
+    <bool name="config_showScreenRecord">true</bool>
 </resources>
