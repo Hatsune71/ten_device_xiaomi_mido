@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017, 2019 The AncientOS Project
+# Copyright (C) 2017, 2019 The RebellionOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,9 +28,9 @@ INITIAL_COPYRIGHT_YEAR=2017
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANCIENT_ROOT="${MY_DIR}/../../.."
+REBELLION_ROOT="${MY_DIR}/../../.."
 
-HELPER="$ANCIENT_ROOT/vendor/ancient/build/tools/extract_utils.sh"
+HELPER="$REBELLION_ROOT/vendor/rebellion/build/tools/extract_utils.sh"
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -38,7 +38,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ANCIENT_ROOT}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${REBELLION_ROOT}"
 
 # Copyright headers and guards
 write_headers
